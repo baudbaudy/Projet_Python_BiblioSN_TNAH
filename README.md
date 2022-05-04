@@ -12,7 +12,7 @@ Vérifier que la version de Python corresponde à Python 3.X : depuis votre term
 Ensuite, allez vous placer dans le dossier, depuis votre terminal, avec 'cd Python_BiblioSN_TNAH-master/'
 Une fois placé dans le dossier, vous devrez lancer un environnement virtuel.
 Pour se faire, installer l'environnement virtuel avec la commande 'python3 -m venv [nom de votre environnement virtuel]'
-Ensuite vous pouvez lancer votre environnement virtuel avec la commande '[nom de votre environnement virtuel]/bin/activate'
+Ensuite vous pouvez lancer votre environnement virtuel avec la commande 'source [nom de votre environnement virtuel]/bin/activate'
 Lancer ensuite la commande 'pip install -r requirements.txt' pour installer les librairies et packages nécessaires au fonctionnement de l'application.
 Lancer enfin l'application avec la commande 'python run.py' et depuis votre navigateur internet rendez-vous à l'adresse http://127.0.0.1:5000/
 
