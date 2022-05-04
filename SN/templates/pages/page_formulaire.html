@@ -1,0 +1,33 @@
+﻿<!-- Page d'accueil pour l'ajout de données -->
+{% extends "conteneur.html" %}
+
+{% block titre %}| Formulaire d'ajout de données{% endblock %}
+
+{% block corps %}
+
+{% include "Partials/modification.html" %}
+
+<div class="container">
+    <p class="text-center fw-bold">Aide à l'ajout</p>
+    <div>
+        <p>Ce formulaire vous permet de modifier le catalogue de la bibliothèque du Souvenir Napoléonien.</p>
+        <br/>
+        <p>Veuillez respecter l'assocation et ses membres qui désirent partager transmettre leur amour de l'Histoire et pérénniser
+        le souvenir de ce que fut les deux Empires français, dans leur grandeur et leurs échecs, leurs victoires et leurs défaites, leurs vertus et leurs vices.
+        Aussi il est demandé à tous ceux qui contriburont à l'enrichissement du catalogue de la bibliothèque d'en respecter l'esprit et l'objectif. Pour rappel, la bibliothèque
+        propose des ouvrages en lien avec le Premier et le Second Empire sous toutes leurs formes. Toutes ouvrages qui s'écarteraient de ces thématiques ne sauraient être à sa place dans nos rayons.
+        </p>
+    </div>
+    <p>Vous avez la possiblité de :</p>
+    <ul>
+        <b>Ajouter un ouvrage :</b> vous pouvez ajouter un ouvrage nouveau ou déjà présent dans notre bibliothèque mais absent du catalogue et qui respecte la thématique du lieu.
+    </ul>
+    <ul>
+        <b>Modifier une entrée du catalogue :</b> Si vous vous constatez une erreur dans les références des livres, vous avez la possibilité de modifier le catalogue.
+    </ul>
+    <ul>
+        <b>Supprimer un ouvrage :</b> Si un livre n'est plus présent dans nos rayons ou ne respecte pas notre thématique, vous pouvez le supprimer du catalogue.
+    </ul>
+</div>
+
+{% endblock %}

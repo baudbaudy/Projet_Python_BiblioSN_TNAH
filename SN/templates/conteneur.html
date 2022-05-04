@@ -1,0 +1,57 @@
+﻿<!-- Template général de l'application SN-->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Bibliothèque Souvenir napoleonien {%block titre %}{%endblock%}</title>
+    <!-- Lien vers le fichier css.html pour définir l'aspect de l'application -->
+    {% include "Partials/css.html" %}
+    <!-- Lien vers le fichier metadata.html contenant les métadonnées de l'application. -->
+    {% include "Partials/metadata.html" %}
+
+    <style type="text/css">
+            .hero  {
+                background-position: top center;
+                padding:10vh;
+                background-image: url({{url_for("static", filename="images/SNN.jpg")}});
+            }
+            .container .hero {
+                background-image: none;
+            }
+    </style>
+</head>
+
+<body>
+   <!-- Corps de la page -->
+    <div class="container">
+        <!-- Définition des barres de navigation -->
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark justify-content-between">
+            <img src="{{url_for('static', filename='images/SNN.jpg')}}" width="45" height="45"
+                 class="d-inline-block align-top" alt="logo" />
+            <!-- Titre de page d'accueil -->
+            <a class="navbar-brand" href="{{ url_for('accueil') }}">SN</a>
+            <li class="nav-item texte_navbar">
+                <!-- Lien vers la page index auteurs-->
+                <a class="nav-link a-nav text-dark bg-white" href="{{ url_for('index_auteurs')}}">Index des auteurs</a>
+            </li>
+            <!-- Installation de la barre de recherche rapide-->
+            <form class="form-inline" action="{{url_for("recherche")}}" method="GET">
+                <input class="form-control" name="keyword" type="search" placeholder="Recherche rapide" aria-label="Recherche">
+                <button class="btn btn-outline-info" type="submit">Rechercher</button>
+            </form>
+        </nav>
+        <div class="row">
+            <div class="col">
+                {% block corps %}{% endblock %}
+            </div>
+        </div>
+    </div>
+</body>
+<!--Pied de page-->
+    <footer>
+        <div class="footer-copyright text-center py-3">
+            <p>© Bibliothèque du Souvenir napoleonien - <a href="https://www.chartes.psl.eu/">ENC<a>,<a href="https://www.chartes.psl.eu/fr/rubrique-admissions/master-technologies-numeriques-appliquees-histoire"> M2 TNAH</a>, 2021-2022<p />
+            <a href="https://www.chartes.psl.eu/"></a>
+        </div>
+    </footer>
+    </html>

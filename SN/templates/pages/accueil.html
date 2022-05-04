@@ -1,0 +1,36 @@
+﻿<!--Page d'accueil-->
+{% extends "conteneur.html" %}
+{% block afternav %}
+    {% include "Partials/recherche.html" %}
+{%endblock%}
+{% block corps %}
+
+<h1>Bibliothèque du Souvenir napoléonien</h1>
+<h3>Catalogue en ligne d'une bibliothèque spécialisée sur le Premier et Second Empire français</h3>
+
+{% if livres %}
+<br />
+<p>
+    La bibliothèque compte plus de {{livres|length}} ouvrages couvrant les périodes du Premier Empire et du Second Empire.
+    Elle est ouverte aux adhérents de l'association le Souvenir napoléonien pour consultation sur place.
+    Si vous désirez plus d'informations, cliquez <a id="link" href="{{url_for('savoir')}}"> ici.</a>
+</p>
+
+<h5>Ci-dessous la liste des ouvrages de la bibliothèque ( vous pouvez compléter la liste<a id="link" href="{{url_for('page_formulaire')}}"> ici</a>) :</h5>
+<br />
+<ul>
+    {% for livre in livres %}
+    <li><a target=_blank href="{{url_for('livre', ENTREE=livre.ENTREE)}}">{{livre.TITRE}}</a></li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>Le catalogue est en cours de constitution</p>
+{% endif %}
+<br />
+<p>
+<p>
+    Cette application a été développée dans le cadre d'un projet de M2 TNAH à l'ENC.<br />
+    Elle permet de naviguer et d'effectuer des recherches dans le nouveau catalogue de la bibliothèque du SN.
+</p>
+
+{% endblock %}

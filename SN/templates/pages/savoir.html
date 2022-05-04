@@ -1,0 +1,38 @@
+<!--Page en savoir plus-->
+{% extends "conteneur.html" %}
+
+{% block titre %}| En savoir plus{%endblock%}
+
+{% block corps %}
+
+<div >
+    <div>
+        <h1>En savoir plus: le Souvenir Napoléonien</h1>
+        <br/>
+        <p>Créé le 27 décembre 1937, le Souvenir napoléonien est la plus importante association napoléonienne d’Europe,
+          reconnue d’utilité publique par décret ministériel du 5 novembre 1982.
+          Il a pour but d’étudier et de faire connaître les institutions, les lieux, les événements et les personnes qui y ont fait l’histoire
+          du Premier et du Second Empire. Pour en apprendre davantage sur cette association, rendez-vous <a target="_blank" href="https://www.souvenirnapoleonien.org/">ici</a>.</p>
+        <br/>
+    </div>
+    <div>
+        <h2>La bibliothèque du Souvenir Napoléonien</h2>
+        <br/>
+        <p>La bibliothèque compte plus de 2 100 ouvrages couvrant les périodes du Premier Empire et du Second Empire.
+          Elle est ouverte aux adhérents de l'association pour consultation sur place aux jours indiqués dans <a target="_blank" href="https://www.souvenirnapoleonien.org/evenements/">l'agenda de l'association</a></p>
+        <br/>
+    </div>
+    <div>
+        <h3>L'application du catalogue de la bibliothèque</h3>
+        <br/>
+    <div>
+      <br/>Cette application vise à faciliter la navigation dans le catalogue de la bibliothèque. Les informations exposées ici sont celles fournies par la bibliothèque
+      du Souvenir Napoléonien. Vous pouvez y trouver en page d'accueil l'index complet des livres que possède la bibliothèque, index dans lequel vous pouvez faire des recherches
+      grâce à la barre de recherches prévue à cette effet. En cliquant sur un ouvrage, sa page catalogue s'ouvrira dans une nouvelle fenêtre, vous fournissant diverses informations
+      (son auteur, sa cote, le type de livre, etc...). De plus, vous disposez aussi en page d'accueil d'un lien pour vous amenez à l'index des auteurs. Vous aurez ainsi la liste exhaustive
+      des auteurs présents dans la bibliothèque et si vous vous cliquez sur un auteur, le site ouvrira une fenêtre sur la page catalogue de l'un de ses livres présent en rayon.
+      <br/>
+      <a href="{{url_for('accueil')}}">Retour à l'accueil</a></div>
+</div>
+
+{% endblock %}
