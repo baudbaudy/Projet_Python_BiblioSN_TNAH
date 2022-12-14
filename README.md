@@ -1,8 +1,7 @@
 
 # Bibliothèque du Souvenir Napoléonien
 
-BiblioSN est un projet d'application Flask réalisé dans le cadre du cours Python du M2 "Technologies Numériques Appliquées à l'Histoire" de l'École Nationale des Chartes.
-
+BiblioSN est un projet d'application Flask.
 Celui-ci vise à proposer de parcourir la collection de la Bibliothèque de l'association le Souvenir Napoléonien, une des plus importantes associations culturelles de France sur l'histoire de Premier et Second empire. Actuellement, l'association ne propose d'explorer le contenu de sa bibliothèque qu'à partir d'un simple fichier Excel, ce qui est peu pratique pour l'utilisateur. Aussi, à partir de ce fichier Excel, seul catalogue du lieu disponible en ligne,  nous voulons proposer une application avec une interface qui faciliterait la recherche et la prise d'information sur le contenu des rayons de ladite bibliothèque. Par ailleurs, l'application devra disposer, en plus d'une liste exhaustive des ouvrages disponibles, d'un index des auteurs présents dans les rayons avec un renvoi vers les livres qu'ils ont écrit. Un formulaire est aussi en développement afin de permettre aux membres de l'association de compléter et modifier le catalogue en ligne.
 
 ## Installation de l'application
